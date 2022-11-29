@@ -7,9 +7,15 @@ import org.springframework.stereotype.Service;
 public class MaintenanceMonitorService {
     private final Message message = new Message();
 
-    public void resetMessage() { message.resetMes();}
+    public void resetMessage() {
+        message.resetMes();
+    }
 
-    public String getMessage() { return message.getMes(); }
+    public String getMessage() {
+        return message.getMes();
+    }
 
-    public void setMessage(String mes) { message.setMes(mes);}
+    public void setMessage(String mes) {
+        message.setMes(mes);
+    }
 }
