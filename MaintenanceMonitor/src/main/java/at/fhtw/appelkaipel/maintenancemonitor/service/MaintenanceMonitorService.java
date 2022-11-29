@@ -12,6 +12,4 @@ public class MaintenanceMonitorService {
     public String getMessage() { return message.getMes(); }
 
     public void setMessage(String mes) { message.setMes(mes);}
-
 }
-
