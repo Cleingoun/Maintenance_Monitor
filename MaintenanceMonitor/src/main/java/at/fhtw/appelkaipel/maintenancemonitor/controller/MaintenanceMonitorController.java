@@ -35,12 +35,13 @@ public class MaintenanceMonitorController {
     }
 
     @GetMapping("/message/{message}")
-    String setMes(@PathVariable String message) {
+    String setMes(@PathVariable String message, Model model) {
         if (!message.equals("reset")) {
             monitorService.setMessage(message);
         } else {
             monitorService.resetMessage();
         }
-        return monitorService.getMessage();
+        model.addAttribute("setText","You just set the message to: \""+monitorService.getMessage()+"\"");
+        return "change";
     }
 }
